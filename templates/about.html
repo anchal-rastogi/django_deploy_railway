@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- about
+            ----------------------------------------------- -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row s-about__content width-sixteen-col">
+                    <div class="column grid-block grid-section-split">
+
+                        <img src="{% static 'images/geometric_shape.svg' %}" alt="" class="s-about__content-imgbg">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">About</div>
+                            <h2 class="text-display-title">
+                                Turning Passion into Purpose: <br>My Journey of Growth and Creation.</h2>
+                          
+                        </div> <!-- end section-header -->
+
+                        <div class="s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                                I'm Anchal Rastogi, a passionate student on a journey to become a skilled software
+                                engineer. With a growing love for web development, I'm focused on mastering frontend and
+                                backend web development using HTML, CSS, JavaScript, especially Python and Django. With
+                                a strong foundation in both theory and practical skills, I thrive on turning
+                                complex ideas into elegant digital experiences.
+
+                            </p>
+
+                            <p class="attention-getter">
+                                My development style blends
+                                clean, scalable code with intuitive, responsive design—ensuring that every solution I
+                                create is not only visually striking but also functionally powerful and future-ready.
+                                With every line of code, I aim to grow not just as a developer, but also as a
+                                thinker—someone who blends creativity with logic.
+                            </p>
+
+
+                        </div> <!-- end s-about__content-main -->
+                        <div class="s-about__content-btn grid-section-split__bottom">
+                            {% csrf_token %}
+                            
+                            <a class="btn btn--stroke u-fullwidth" href="{% static 'images/Resume.pdf' %}" target="_blank"
+                            >View my Resume</a>
+
+
+                        </div>
+
+                         <!-- end s-about__content-btn -->
+
+                    </div> <!-- content-inner -->
+                </div>
+
+            </section> <!-- end s-about -->
+
+
+
+{% endblock %}
