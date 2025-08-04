@@ -1,6 +1,8 @@
+databses:
+  - name: Myportfolio
 services:
   - type: web
-    name: portfolio
+    name: MyPortfolio
     runtime: python
     buildCommand: "python manage.py collectstatic --noinput && python manage.py migrate"
     startCommand: "gunicorn MyPortfolio.wsgi:application"
