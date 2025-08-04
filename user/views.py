@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.http import HttpResponse
 from.models import*
 
 # Create your views here.
@@ -22,13 +23,13 @@ def project(request):
     return render(request,"project.html")
 
 def contact(request):
-    if request.method=="post":
+    if request.method=="POST":
         Name=request.POST.get("name")
         Email=request.POST.get("email")
         Mobile=request.POST.get("mob")
         Message=request.POST.get("msg")
         tblcontact(name=Name,email=Email,mobile=Mobile,message=Message).save()
-        return redirect("<script> alert('Data stored Successfully');location.href='/contact/'</script>")
+        return HttpResponse("<script> alert('Data stored Successfully');location.href='/contact/'</script>")
     return render(request,"contact.html")
 
 

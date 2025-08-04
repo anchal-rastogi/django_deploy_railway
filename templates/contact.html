@@ -30,7 +30,7 @@
                     great together!
 
                 </p>
-                <form method="POST" action="{% url 'contact' %}">
+                <form method="POST" >
 
                     {% csrf_token %}
                     <input type="text" required placeholder="Name.." class="form-control " id="a" name="name" />
@@ -38,10 +38,11 @@
                     <input type="number" required placeholder="Number.." class="form-control" id="a" name="mob" />
                     <input type="text" required placeholder="Message.." class="form-control" id="b" name="msg" />
                     <!--<textarea required placeholder="Enter your message" class="form-control" id="a" name="msg"></textarea>-->
-                    <button type="submit" value="Send" class="form-control bg-mycolor1" id="c"></button>
+                   <button type="submit" value="Send" class="form-control c " >Send</button>
 
                 </form>
             </div>
+            
             <div class="column xl-5 md-12 u-flexitem-x-right ">
 
                 <div class="contact-block ">
@@ -60,7 +61,7 @@
                         </li>
                         </br>
                         <li>
-                            <a href="https://www.instagram.com/_anchal_rastogi/" taget="_blank">
+                            <a href="https://www.instagram.com/_anchal_rastogi/" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     style="fill:rgba(0, 0, 0, 1) transform ">
                                     <path
@@ -100,7 +101,7 @@
                         </li>
                         </br>
                         <li>
-                            <a href="www.linkedin.com/in/anchal-rastogi-748aa7333" target="_blank">
+                            <a href="http://www.linkedin.com/in/anchal-rastogi-748aa7333" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     style="fill:rgba(0, 0, 0, 1);transform:-ms-filter">
                                     <path
