@@ -22,7 +22,7 @@ def project(request):
     return render(request,"project.html")
 
 def contact(request):
-    if request.method=="POST":
+    if request.method=="post":
         Name=request.POST.get("name")
         Email=request.POST.get("email")
         Mobile=request.POST.get("mob")
