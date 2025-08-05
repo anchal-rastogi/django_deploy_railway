@@ -60,56 +60,19 @@
         #e {
             margin-top: 80px;
         }
-
-        .s-header__nav {
-            display: none;
-        }
-
-        body.menu-is-open .s-header__nav {
-            display: block;
-        }
-
-        /* Extra: Toggle button visible only on mobile */
-        .s-header__menu-toggle {
-            display: none;
-        }
-
-        @media screen and (max-width: 768px) {
-            .s-header__menu-toggle {
-                display: block;
-                color: white;
-                background: black;
-                padding: 10px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-
-            .s-header__nav {
-                background: #f7f7f7;
-                padding: 15px;
-            }
-        }
-
-            /* Hide menu by default in mobile */
-body.menu-is-open .s-header__nav {
-    display: block;
-}
-
-/* Default state: hide nav in mobile */
-.s-header__nav {
-    display: none;
-}
-
 /* Desktop view: nav always visible */
-@media screen and (min-width: 901px) {
-    .s-header__nav {
-        display: block !important;
-    }
+
 
     .s-header__menu-toggle {
-        display: none; /* Hide toggle button on desktop */
+        display: none !important; /* Hide toggle button on desktop */
     }
-}
+   
+    .s-header__contact{
+        display:block !important;
+    }
+    #f{
+        display: block !important;
+    }
 
 
         
@@ -152,7 +115,7 @@ body.menu-is-open .s-header__nav {
                         </a>
                     </div>
                 </div>
-                <nav class="s-header__nav">
+                <nav class="s-header__nav" id="f">
                     
                    
 
@@ -167,12 +130,13 @@ body.menu-is-open .s-header__nav {
 
                     
                    
-                    
+                  </nav>   
 
-                </nav>
-                <div class="s-header__contact">
+               <div class="s-header__contact">
                         <a href="/contact/" class="btn btn--primary s-header__contact-btn">Let's Connect!</a>
                     </div>
+                    
+                
 
             </div>
 
@@ -269,7 +233,7 @@ body.menu-is-open .s-header__nav {
                             </div>
                         </center>
                     </div>
-                    <div class="s-header__contact column">
+                    <div class="s-header__contact">
                         <a href="/contact/" class="btn btn--primary s-header__contact-btn">Let's Connect!</a>
                     </div>
                 </center>
