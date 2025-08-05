@@ -36,33 +36,83 @@
 
         #a {
             width: 600px;
-            height:40px;
+            height: 40px;
             border: 2px solid black;
-            background:white;
-            
-            
+            background: white;
+
+
         }
-         #b {
+
+        #b {
             width: 600px;
-            height:100px;
+            height: 100px;
             border: 2px solid black;
-            background:white;
-           
+            background: white;
+
         }
-        .c{
-            background:black;
-            color:white !important;
-         
+
+        .c {
+            background: black;
+            color: white !important;
+
         }
-        #e{
-            margin-top:80px;
+
+        #e {
+            margin-top: 80px;
         }
-        .s-header__nav{
-            display:none;
+
+        .s-header__nav {
+            display: none;
         }
-        .body.menu-is-open .s-header__nav{
-            display:block;
+
+        body.menu-is-open .s-header__nav {
+            display: block;
         }
+
+        /* Extra: Toggle button visible only on mobile */
+        .s-header__menu-toggle {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .s-header__menu-toggle {
+                display: block;
+                color: white;
+                background: black;
+                padding: 10px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .s-header__nav {
+                background: #f7f7f7;
+                padding: 15px;
+            }
+        }
+
+            /* Hide menu by default in mobile */
+body.menu-is-open .s-header__nav {
+    display: block;
+}
+
+/* Default state: hide nav in mobile */
+.s-header__nav {
+    display: none;
+}
+
+/* Desktop view: nav always visible */
+@media screen and (min-width: 901px) {
+    .s-header__nav {
+        display: block !important;
+    }
+
+    .s-header__menu-toggle {
+        display: none; /* Hide toggle button on desktop */
+    }
+}
+
+
+        
     </style>
 </head>
 
@@ -83,6 +133,10 @@
     <!-- page wrap
     ================================================== -->
     <div id="page" class="s-pagewrap ss-home">
+        <a class="s-header__menu-toggle" href="#0">
+            <span>Menu</span>
+        </a>
+
         <!-- # site header 
         ================================================== -->
         <header class="s-header">
@@ -99,6 +153,7 @@
                     </div>
                 </div>
                 <nav class="s-header__nav">
+                    
                    
 
                     <ul class="s-header__menu-links">
@@ -110,20 +165,24 @@
 
                     </ul>
 
-                    <div class="s-header__contact">
-                        <a href="/contact/" class="btn btn--primary s-header__contact-btn">Let's Connect!</a>
-                    </div>
+                    
                    
                     
 
                 </nav>
+                <div class="s-header__contact">
+                        <a href="/contact/" class="btn btn--primary s-header__contact-btn">Let's Connect!</a>
+                    </div>
 
             </div>
 
         </header>
+
         <!-- # site main content
         ================================================== -->
+        
 
+             
 
         {% block content %}
         {% endblock %}
@@ -144,7 +203,7 @@
                         <center>
                             <div class="column xl-6 lg-12 ">
                                 <ul class="s-footer__social social-list">
-                                     
+
                                     <li>
                                         <a href="https://x.com/_Anchal_Rastogi" target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -210,7 +269,7 @@
                             </div>
                         </center>
                     </div>
-                    <div class="s-header__contact column ">
+                    <div class="s-header__contact column">
                         <a href="/contact/" class="btn btn--primary s-header__contact-btn">Let's Connect!</a>
                     </div>
                 </center>
@@ -235,7 +294,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
 
 
 
